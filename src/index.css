@@ -2,6 +2,15 @@ body {
 	margin: 0;
 	padding: 0;
 	background: #f2f4f5;
+	background-image: linear-gradient(
+		to right,
+		#ff8177 0%,
+		#ff867a 0%,
+		#ff8c7f 21%,
+		#f99185 52%,
+		#cf556c 78%,
+		#b12a5b 100%
+	);
 	color: #1e1e1f;
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
@@ -10,4 +19,8 @@ body {
 	margin: 0 24px;
 	position: relative;
 	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

@@ -1,0 +1,11 @@
+.Search {
+	width: 32%;
+	max-width: 400px;
+	min-width: 280px;
+	height: 32px;
+	padding: 12px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-size: 1.2rem;
+	border: none;
+	outline-color: #f99185;
+}

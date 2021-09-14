@@ -1,0 +1,52 @@
+.CreateTodoButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 84px;
+	height: 84px;
+	position: fixed;
+	bottom: 50%;
+	right: 25%;
+	font-size: 50px;
+	font-weight: bold;
+	color: #fafafa;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+	background-size: 200% auto;
+}
+
+.CreateTodoButton:hover {
+	background-position: right center;
+}
+
+.CreateTodoButton::after {
+	content: 'Agregar tarea';
+	width: max-content;
+	position: absolute;
+	opacity: 0;
+	left: 88px;
+	padding: 12px;
+	font-size: 1rem;
+	border-radius: 8px;
+	background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+	transition: opacity 0.5s 0s ease;
+}
+
+.CreateTodoButton:hover::after {
+	opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	.CreateTodoButton {
+		width: 64px;
+		height: 64px;
+		bottom: 24px;
+		right: 24px;
+	}
+
+	.CreateTodoButton::after {
+		content: none;
+	}
+}
