@@ -4,15 +4,19 @@ import Search from './Search'
 import TodoList from './TodoList'
 import TodoItem from './TodoItem'
 import CreateTodoButton from './CreateTodoButton'
+import Modal from './Modal'
+import TodoForm from './TodoForm'
 import { TodoContext } from '../contexts/TodoContext'
 
 function AppIU() {
-	const { searchedTodos, completeTodo, deleteTodo } = React.useContext(TodoContext)
+	const { searchedTodos, completeTodo, deleteTodo, openModal } =
+		React.useContext(TodoContext)
 
 	return (
 		<>
 			<Counter />
 			<Search />
+
 			<TodoList>
 				{searchedTodos.map((todo) => (
 					<TodoItem
@@ -24,6 +28,13 @@ function AppIU() {
 					/>
 				))}
 			</TodoList>
+
+			{openModal && (
+				<Modal>
+					<TodoForm />
+				</Modal>
+			)}
+
 			<CreateTodoButton />
 		</>
 	)
