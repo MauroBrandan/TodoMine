@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './Header'
 import Counter from './Counter'
 import Search from './Search'
 import TodoList from './TodoList'
@@ -14,6 +15,7 @@ function AppIU() {
 
 	return (
 		<>
+			<Header />
 			<Counter />
 			<Search />
 

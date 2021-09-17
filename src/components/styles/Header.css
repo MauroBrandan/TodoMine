@@ -1,0 +1,11 @@
+h1 {
+	color: white;
+}
+
+h1 span {
+	background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
