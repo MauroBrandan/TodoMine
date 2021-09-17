@@ -7,10 +7,11 @@ import TodoItem from './TodoItem'
 import CreateTodoButton from './CreateTodoButton'
 import Modal from './Modal'
 import TodoForm from './TodoForm'
+import UserForm from './UserForm'
 import { TodoContext } from '../contexts/TodoContext'
 
 function AppIU() {
-	const { searchedTodos, completeTodo, deleteTodo, openModal } =
+	const { searchedTodos, completeTodo, deleteTodo, openModal, user } =
 		React.useContext(TodoContext)
 
 	return (
@@ -31,13 +32,19 @@ function AppIU() {
 				))}
 			</TodoList>
 
-			{openModal && (
+			<CreateTodoButton />
+
+			{!user && openModal && (
+				<Modal>
+					<UserForm />
+				</Modal>
+			)}
+
+			{user && openModal && (
 				<Modal>
 					<TodoForm />
 				</Modal>
 			)}
-
-			<CreateTodoButton />
 		</>
 	)
 }

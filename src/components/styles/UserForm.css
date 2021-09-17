@@ -1,0 +1,65 @@
+.UserForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
+	min-width: 300px;
+	max-width: 400px;
+	height: 316px;
+	padding: 12px;
+	font-size: 1.2rem;
+	text-align: center;
+	border-radius: 12px;
+	background-image: linear-gradient(
+		to right,
+		#ff8177 0%,
+		#ff867a 0%,
+		#ff8c7f 21%,
+		#f99185 52%,
+		#cf556c 78%,
+		#b12a5b 100%
+	);
+}
+
+.UserForm h2 {
+	margin: 0;
+}
+
+.UserForm p {
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.UserForm label {
+	margin-bottom: 8px;
+	font-size: 1.2rem;
+}
+
+.UserForm input {
+	width: 60%;
+	height: 24px;
+	margin-bottom: 8px;
+	padding: 12px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-size: 1.2rem;
+	border: none;
+	outline: none;
+}
+
+.UserForm__button {
+	width: max-content;
+	height: 52px;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: white;
+	border: none;
+	cursor: pointer;
+	background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+	background-size: 200% auto;
+}
+
+.UserForm__button:hover {
+	background-position: right center;
+}
