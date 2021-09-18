@@ -42,6 +42,7 @@ function TodoProvider(props) {
 		setTodos(newTodos)
 	}
 
+	// eslint-disable-next-line
 	useEffect(() => !user && setOpenModal(true), [])
 
 	const addUser = (user) => {
