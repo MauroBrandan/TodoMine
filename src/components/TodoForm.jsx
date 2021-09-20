@@ -1,10 +1,8 @@
-import React, { useState, useContext } from 'react'
-import { TodoContext } from '../contexts/TodoContext'
+import React, { useState } from 'react'
 
 import './styles/TodoForm.css'
 
-function TodoForm() {
-	const { setOpenModal, addTodo } = useContext(TodoContext)
+function TodoForm({ setOpenModal, addTodo }) {
 	const [todoValue, setTodoValue] = useState('')
 
 	const onChangeTextValue = (event) => {

@@ -1,10 +1,8 @@
-import React, { useState, useContext } from 'react'
-import { TodoContext } from '../contexts/TodoContext'
+import React, { useState } from 'react'
 
 import './styles/UserForm.css'
 
-function UserForm() {
-	const { setOpenModal, addUser } = useContext(TodoContext)
+function UserForm({ setOpenModal, addUser }) {
 	const [userValue, setUserValue] = useState('')
 
 	const onChangeInputValue = (event) => {

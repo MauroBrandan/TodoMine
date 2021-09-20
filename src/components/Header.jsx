@@ -4,9 +4,11 @@ import './styles/Header.css'
 
 function Header() {
 	return (
-		<h1>
-			TODO <span>MINE</span>
-		</h1>
+		<header>
+			<h1>
+				TODO <span>MINE</span>
+			</h1>
+		</header>
 	)
 }
 
