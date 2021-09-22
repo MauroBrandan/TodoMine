@@ -1,0 +1,50 @@
+.LoadingTodo-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 23px 0 0 0;
+	padding: 0 8px;
+	box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+	background-image: linear-gradient(
+		to right,
+		#ff8177 0%,
+		#ff867a 0%,
+		#ff8c7f 21%,
+		#f99185 52%,
+		#cf556c 78%,
+		#b12a5b 100%
+	);
+}
+
+.LoadingTodo-text {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon {
+	border-radius: 50%;
+	height: 48px;
+	width: 48px;
+	background-color: #ff8177;
+}
+
+.LoadingTodo-container,
+.LoadingTodo-completeIcon,
+.LoadingTodo-deleteIcon {
+	background-size: 150% 150%;
+	animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

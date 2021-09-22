@@ -2,8 +2,17 @@ import { useState, useEffect } from 'react'
 import useLocalStorage from './useLocalStorage'
 
 function useTodos() {
-	const [todos, setTodos] = useLocalStorage('TODOS_V1', [])
-	const [user, setUser] = useLocalStorage('USER_V1', '')
+	const {
+		item: todos,
+		saveItem: setTodos,
+		loading,
+		error,
+	} = useLocalStorage('TODOS_V1', [])
+	const {
+		item: user,
+		saveItem: setUser,
+		loading: loadingUser,
+	} = useLocalStorage('USER_V1', '')
 	const [searchValue, setSearchValue] = useState('')
 	const [openModal, setOpenModal] = useState(false)
 
@@ -41,13 +50,15 @@ function useTodos() {
 	}
 
 	// eslint-disable-next-line
-	useEffect(() => !user && setOpenModal(true), [])
+	useEffect(() => !loadingUser && !user && setOpenModal(true), [])
 
 	const addUser = (user) => {
 		setUser(user)
 	}
 
 	return {
+		error,
+		loading,
 		totalTodos,
 		completedTodos,
 		searchValue,

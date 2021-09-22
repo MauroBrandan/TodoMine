@@ -8,10 +8,15 @@ import CreateTodoButton from './components/CreateTodoButton'
 import Modal from './components/Modal'
 import TodoForm from './components/TodoForm'
 import UserForm from './components/UserForm'
+import TodoError from './components/TodosError'
+import TodosLoading from './components/TodosLoading'
+import EmptyTodos from './components/EmptyTodos'
 import useTodos from './hooks/useTodos'
 
 function App() {
 	const {
+		error,
+		loading,
 		totalTodos,
 		completedTodos,
 		searchValue,
@@ -33,6 +38,10 @@ function App() {
 			<Search searchValue={searchValue} setSearchValue={setSearchValue} />
 
 			<TodoList>
+				{error && <TodoError />}
+				{loading && <TodosLoading />}
+				{!loading && !searchedTodos.length && <EmptyTodos />}
+
 				{searchedTodos.map((todo) => (
 					<TodoItem
 						key={todo.id}
@@ -46,7 +55,7 @@ function App() {
 
 			<CreateTodoButton setOpenModal={setOpenModal} />
 
-			{!user && openModal && (
+			{!loading && !user && openModal && (
 				<Modal>
 					<UserForm setOpenModal={setOpenModal} addUser={addUser} />
 				</Modal>
