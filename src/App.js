@@ -12,7 +12,7 @@ import TodosError from './components/TodosError'
 import TodosLoading from './components/TodosLoading'
 import EmptyTodos from './components/EmptyTodos'
 import EmptySearchResults from './components/EmptySearchResults'
-import ChangeAlertWithStorageListener from './components/ChangeAlert'
+import ChangeAlert from './components/ChangeAlert'
 import useTodos from './hooks/useTodos'
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
 				</Modal>
 			)}
 
-			<ChangeAlertWithStorageListener sincronize={sincronizeTodos} />
+			<ChangeAlert sincronize={sincronizeTodos} />
 		</>
 	)
 }
