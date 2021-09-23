@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles/Search.css'
 
-function Search({ searchValue, setSearchValue }) {
+function Search({ searchValue, setSearchValue, loading }) {
 	const onChangeSearchValue = (event) => {
 		setSearchValue(event.target.value)
 	}
@@ -14,6 +14,7 @@ function Search({ searchValue, setSearchValue }) {
 			placeholder='Buscar tarea'
 			value={searchValue}
 			onChange={onChangeSearchValue}
+			disabled={loading}
 		/>
 	)
 }

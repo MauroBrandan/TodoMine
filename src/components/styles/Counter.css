@@ -1,3 +1,7 @@
 .Counter {
 	text-align: center;
 }
+
+.Counter--disabled {
+	opacity: 25%;
+}

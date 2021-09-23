@@ -1,5 +1,7 @@
 .LoadingTodo-container {
-	width: 100%;
+	width: 50%;
+	max-width: 520px;
+	min-width: 280px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

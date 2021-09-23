@@ -8,9 +8,10 @@ import CreateTodoButton from './components/CreateTodoButton'
 import Modal from './components/Modal'
 import TodoForm from './components/TodoForm'
 import UserForm from './components/UserForm'
-import TodoError from './components/TodosError'
+import TodosError from './components/TodosError'
 import TodosLoading from './components/TodosLoading'
 import EmptyTodos from './components/EmptyTodos'
+import EmptySearchResults from './components/EmptySearchResults'
 import useTodos from './hooks/useTodos'
 
 function App() {
@@ -34,15 +35,28 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Counter totalTodos={totalTodos} completedTodos={completedTodos} user={user} />
-			<Search searchValue={searchValue} setSearchValue={setSearchValue} />
+			<Counter
+				totalTodos={totalTodos}
+				completedTodos={completedTodos}
+				user={user}
+				loading={loading}
+			/>
+			<Search
+				searchValue={searchValue}
+				setSearchValue={setSearchValue}
+				loading={loading}
+			/>
 
-			<TodoList>
-				{error && <TodoError />}
-				{loading && <TodosLoading />}
-				{!loading && !searchedTodos.length && <EmptyTodos />}
-
-				{searchedTodos.map((todo) => (
+			<TodoList
+				error={error}
+				loading={loading}
+				totalTodos={totalTodos}
+				searchedTodos={searchedTodos}
+				onError={() => <TodosError />}
+				onLoading={() => <TodosLoading />}
+				onEmptyTodos={() => <EmptyTodos />}
+				onEmptySearchResults={() => <EmptySearchResults searchText={searchValue} />}
+				render={(todo) => (
 					<TodoItem
 						key={todo.id}
 						text={todo.text}
@@ -50,8 +64,8 @@ function App() {
 						onComplete={() => completeTodo(todo.id)}
 						onDelete={() => deleteTodo(todo.id)}
 					/>
-				))}
-			</TodoList>
+				)}
+			/>
 
 			<CreateTodoButton setOpenModal={setOpenModal} />
 
