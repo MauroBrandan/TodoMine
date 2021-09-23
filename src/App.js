@@ -12,6 +12,7 @@ import TodosError from './components/TodosError'
 import TodosLoading from './components/TodosLoading'
 import EmptyTodos from './components/EmptyTodos'
 import EmptySearchResults from './components/EmptySearchResults'
+import ChangeAlertWithStorageListener from './components/ChangeAlert'
 import useTodos from './hooks/useTodos'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 		user,
 		addUser,
 		addTodo,
+		sincronizeTodos,
 	} = useTodos()
 
 	return (
@@ -80,6 +82,8 @@ function App() {
 					<TodoForm setOpenModal={setOpenModal} addTodo={addTodo} />
 				</Modal>
 			)}
+
+			<ChangeAlertWithStorageListener sincronize={sincronizeTodos} />
 		</>
 	)
 }
