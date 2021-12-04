@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/TodoMine/static/css/main.36a339e1.chunk.css",
-    "main.js": "/TodoMine/static/js/main.6467a1af.chunk.js",
-    "main.js.map": "/TodoMine/static/js/main.6467a1af.chunk.js.map",
+    "main.js": "/TodoMine/static/js/main.b33ba695.chunk.js",
+    "main.js.map": "/TodoMine/static/js/main.b33ba695.chunk.js.map",
     "runtime-main.js": "/TodoMine/static/js/runtime-main.df1f65a8.js",
     "runtime-main.js.map": "/TodoMine/static/js/runtime-main.df1f65a8.js.map",
-    "static/js/2.fd61370d.chunk.js": "/TodoMine/static/js/2.fd61370d.chunk.js",
-    "static/js/2.fd61370d.chunk.js.map": "/TodoMine/static/js/2.fd61370d.chunk.js.map",
+    "static/js/2.ef282639.chunk.js": "/TodoMine/static/js/2.ef282639.chunk.js",
+    "static/js/2.ef282639.chunk.js.map": "/TodoMine/static/js/2.ef282639.chunk.js.map",
     "index.html": "/TodoMine/index.html",
     "static/css/main.36a339e1.chunk.css.map": "/TodoMine/static/css/main.36a339e1.chunk.css.map",
-    "static/js/2.fd61370d.chunk.js.LICENSE.txt": "/TodoMine/static/js/2.fd61370d.chunk.js.LICENSE.txt"
+    "static/js/2.ef282639.chunk.js.LICENSE.txt": "/TodoMine/static/js/2.ef282639.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.df1f65a8.js",
-    "static/js/2.fd61370d.chunk.js",
+    "static/js/2.ef282639.chunk.js",
     "static/css/main.36a339e1.chunk.css",
-    "static/js/main.6467a1af.chunk.js"
+    "static/js/main.b33ba695.chunk.js"
   ]
 }
